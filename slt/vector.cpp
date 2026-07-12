@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+// vector is a sequence container that encapsulates dynamic size arrays. 
 using namespace std;
 int main() {
     vector<int> vec;

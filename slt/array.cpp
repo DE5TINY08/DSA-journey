@@ -1,5 +1,6 @@
 #include <iostream>
 #include <array>
+// array is a container that encapsulates fixed size arrays.
 using namespace std;
 
 int main() {
