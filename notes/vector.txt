@@ -1,0 +1,1 @@
+vector is the dynamic array where the size of array is double the previous array which is dumped after pushing element

@@ -26,6 +26,13 @@ int main() {
         cout << "Element: " << *it << endl;
     }
      cout << "Size of list: " << lst.size() << endl;
+     // 2nd element (index 1)
+    int second = *std::next(lst.begin(), 1); 
+    
+    // 3rd element (index 2)
+    int third = *std::next(lst.begin(), 2); 
+
+    cout << "2nd: " << second << ", 3rd: " << third << "\n";
 
     //it also have insert() and erase() methods to add and remove elements at specific positions in the list.
     //also have clear() method to remove all elements from the list.
