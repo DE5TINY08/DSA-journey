@@ -1,0 +1,46 @@
+//initially i solved this problem using brute force method but it was not efficient so i used two pointer approach to solve this problem in O(n) time complexity and O(1) space complexity.
+
+//with brute force method we can solve this problem in O(n^2) time complexity and O(1) space complexity.
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        vector<int> index;
+        for(int i=0;i<numbers.size();i++)
+        {           
+            for(int j=i+1;j<numbers.size();j++)
+            {
+                if((numbers[i]+numbers[j]) == target)
+                {
+                    index.push_back(i+1);
+                    index.push_back(j+1);
+                }
+            }
+
+        }
+        return index;
+    }
+};
+//this is the two pointer approach to solve this problem in O(n) time complexity and O(1) space complexity.
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        vector<int> index;
+        int j=numbers.size() - 1;
+        int k=0;
+        for(int i=0;i<numbers.size();i++)
+        {
+            if(numbers[k]+numbers[j] > target)
+            {
+                j--;
+            }
+            else if(numbers[k]+numbers[j] < target)
+            {
+                k++;
+            }
+        }
+        index.push_back(k+1);
+        index.push_back(j+1);
+        return index;
+    }
+};
