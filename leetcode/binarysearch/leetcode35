@@ -13,6 +13,6 @@ public:
     if (nums[mid] == target)
         return mid;
     else
-        return low;// target not found
+        return -1;// target not found
     }
 };

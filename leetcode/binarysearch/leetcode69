@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int mySqrt(int x) {
+        int ans;
+        int low = 0,high = x;
+        while(low<=high)
+        {
+            ans = (low + high)/2;
+            long long square = (long long)ans*ans;
+            if(square == x)
+                return ans;
+            else if(square > x)
+                high = ans-1;
+            else
+                low = ans+1;
+            
+        }
+       return (low + high)/2;
+    }
+};
