@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int i=0,j=height.size()-1;
+        int ans = (j-i)*min(height[i],height[j]);
+       for(int k=0;k<height.size();k++)
+       {    
+             int check ;
+            if(height[i]>height[j])
+            { 
+                check = (j-i)*height[j];
+                j--;
+            }
+            else
+            {
+                check = (j-i)*height[i];
+                i++;
+            }
+            if(check>ans)
+                swap(check,ans);
+       }
+       return ans;
+    }
+};
+//this can have done in less time by using while loop and checking the area in each iteration and moving the pointer with smaller height.
